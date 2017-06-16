@@ -30,7 +30,7 @@ build:
         - arjen/hugo-build:
             version: "0.17"
             theme: hugo-tranquilpeak-theme
-            flags: --buildDrafts=true 
+
  deploy:
      steps:
         - install-packages:
