@@ -21,6 +21,12 @@ build:
     # http://devcenter.wercker.com/docs/steps/index.html
 
  steps:
+      - install-packages:
+        packages: git
+    - script:
+        name: download theme
+        code: |
+            $(git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git ./themes/hugo-tranquilpeak-theme)
     - arjen/hugo-build:
         version: "0.17"
         theme: hugo-tranquilpeak-theme
